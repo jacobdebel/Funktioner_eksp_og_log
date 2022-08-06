@@ -1,0 +1,491 @@
+#+title: Eksponential og logaritmefunktioner
+#+subtitle: 
+#+author: Matematik
+#+date: Vibenshus Gymnasium
+# Themes: beige|black|blood|league|moon|night|serif|simple|sky|solarized|white
+#+reveal_theme: sky
+#+reveal_title_slide: <h2>%t</h2><h3>%s</h3><h4>%a</h4><h4>%d</h4>
+#+reveal_title_slide_background: ./img/Eksponentialfunktioner_mange.png
+#+reveal_default_slide_background:
+#+reveal_extra_options: slideNumber:"c/t",progress:true,transition:"slide",navigationMode:"default",history:false,hash:true
+# #+reveal_extra_attr: style="color:red"
+#+options: toc:nil num:nil tags:nil timestamp:nil ^:{}
+
+* Hvad var det lige, vi så?
+#+attr_html: :width 80%
+[[./img/Eksponentialfunktioner_mange.png]]
+
+* Det klassiske eksempel
+#+reveal_html: <div style="font-size: 60%;">
+#+begin_quote
+Din, nu afdøde, oldemor indsatte 1000 kr på din børneopsparring, den dag du blev født.
+
+Banken har givet 2 % i rente i al tid frem til nu, og der er blevet tilskrevet renter én gang om året.
+#+end_quote
+
+#+reveal_html: <div class="column" style="float:left; width: 70%">
+- Hvor mange penge kan du hæve fra din børneopsparring nu?
+- Hvornår kan du hæve 2000 kr fra din børneopsparring, hvis du lader alle penge stå på kontoen i mellemtiden?
+
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 30%">
+[[./img/cash-piles.png]]
+#+reveal_html: </div>
+
+#+attr_reveal: :frag (appear)
+- 1. spørgsmål kan behandles med hjælp af eksponentialfunktioner.
+- 2. spørgsmål kan besvares med hjælp af logaritmefunktioner.
+
+
+* Den simple eksponentialfunktion
+
+$$f(x) = b \cdot a^x$$
+
+#+reveal_html: <div style="font-size: 60%;">
+- Undersøg, hvilken betydning koefficienterne har for grafens udseende.
+- Alle hjælpemidler er tilladte.
+  - Eksempelvis, åbn geogebra og afprøv forskellige funktioner med forskellige værdier af a og b.
+  - Man kan også åbne sin matematikbog og bruge den :) [[https://matbhtx.systime.dk]]
+** Opgave
+[[./img/foerste_opgave_eksp_funktioner.png]]
+
+- Tillægsspørgsmål
+  - Hvad skal x-værdien være for at $g(x)=8192$?
+  - Hvad skal x-værdien være for at $g(x)=100$?
+
+
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+Forrige opgave kunne nemt besvares
+
+#+attr_html: :width 400px
+[[./img/foerste_opgave_eksp_funktioner.png]]
+
+*Men* Tillægsspørgsmålene var ikke lige sådan at svare på.
+
+#+attr_reveal: :frag (appear)
+For at kunne svare på dem, skal man kende til *logaritmefunktioner*!
+* Logaritmefunktioner
+#+reveal_html: <div style="font-size: 60%;">
+- Logaritmefunktioner er *inverse* funktioner til eksponentialfunktioner.
+
+#+attr_reveal: :frag (appear)
+- Aber, was bedeutet das?
+- Eksponential- og logaritmefunktioner er /spejlinger/ af hinanden gennem aksen $y=x$
+
+
+#+attr_reveal: :frag (appear)
+#+attr_html: :width 500px
+[[./img/eksp_log.png]]
+
+#+attr_reveal: :frag (appear)
+- Hvis man indsætter den ene funktion i den anden, får man $x$ ud.
+- $10^{\log(x)}=x\quad$  og $\quad \log \left(10^{x} \right) = x$
+* 10 tal-logaritmen
+#+reveal_html: <div style="font-size: 60%;">
+#+begin_quote
+10 tals-logaritmen til et tal, er det tal, man skal /opløfte/ 10 i, får at få det oprindelige tal.
+#+end_quote
+
+#+attr_reveal: :frag (appear)
+- Smag lige på den sætning sammen med jeres makker. Hvad betyder det egentlig?
+- Hvad skal man opløfte 10 i, for at få 100?
+- Hvad skal man opløfte 10 i, for at få 1000 000?
+- Hvad skal man opløfte 10 i, for at få 10?
+- Hvad skal man opløfte 10 i, for at få 1?
+- Hvad skal man opløfte 10 i, for at få 0.1?
+  
+#+reveal: split
+#+reveal_html: <div style="font-size: 60%;">
+- En logaritmefunktion tager generelt udgangspunkt i en eksponentialfunktion.
+- Hvis eksponentialfunktionen hedder $$f(x)= a^x$$
+- opskrives den tilsvarende logartimefunktion som $$f^{-1}(x) = \log_a \left( x \right)$$
+
+
+#+attr_reveal: :frag (appear)
+- For 10 tals-logaritmen ville det svare til $$f(x)=10^x \quad \text{og} \quad f^{-1} (x) = \log_{10} (x)$$
+- Hvis man bare skriver $\log(x)$ plejer vi på dansk at opfatte det som $\log_{10}(x)$.
+- Hvis man sætter en funktion sammen med sin inverse(omvendte), så skal de to funktioner /gå ud med hinanden/.
+- $f \left( f^{-1} (x) \right) = \boxed{10^{\left( \log(x) \right)}} = x  \quad \text{og} \quad f^{-1} \left( f(x) \right) = \boxed{\log \left( 10^x \right) = x}$
+* Regneregler for logaritmer
+#+reveal_html: <div style="font-size: 60%;">
+\begin{align*}
+\log \left( 10^x \right) &= x \\
+10^{\log (x)} &=x \\
+\log ( a \cdot b) &= \log(a) + \log(b) \\
+\log \left( \frac{a}{b} \right) &= \log(a) - \log(b) \\
+\log \left( a^n \right) &= n \cdot \log (a) \\
+\log \left( \sqrt[n]{a^b} \right) &= \log \left( a^{\frac{b}{n}} \right) = \frac{b}{n} \cdot \log(a)
+\end{align*}
+** Opgave
+#+reveal_html: <div style="font-size: 60%;">
+Løs følgende opgave vha. *Team-Par-Solo*
+
+#+DOWNLOADED: screenshot @ 2022-08-03 15:53:49
+#+attr_html: :width 600px
+#+attr_latex: :width 7cm
+[[file:img/2022-08-03_15-53-49_screenshot.png]]
+
+** Beviser
+#+reveal_html: <div style="font-size: 60%;">
+- Jeg beviser $$\log(a \cdot b) = \log(a) + \log(b)$$
+#+attr_reveal: :frag (appear)
+- I skal nu i makkerskabsgrupper (grupper af de nærmeste 4) selv bevise $$\log \left( \frac{a}{b} \right) = \log(a) - \log(b)$$
+- Kan I selv klare beviset for $\log \left( a^n \right) = n \cdot \log(a)$?
+- Eller skal jeg tage den :)?
+* Løsning af ligninger vha logaritmer
+#+reveal_html: <div style="font-size: 60%;">
+- Kan I huske: For $g(x)=2^x$, hvilke værdier skal x have for henholdsvis at $g(x)=8192$ og $g(x)=100$?
+#+attr_reveal: :frag (appear)
+- Disse ligninger kan vi løse nu.
+- Jeg løser ligningerne på tavlen.
+** Opgaver
+#+reveal_html: <div style="font-size: 60%;">
+I skal løse følgende ligninger vha. *Parsammenligning*
+
+\begin{align*}
+3 &= 10^x\\
+1.8 &= 10^{x-3}\\
+\log(x) &= 0.5 \\
+\log(3x-2) &= 2 \\
+\log(x-4) + \log(x+7) &=2 \\
+7^x &= 67.8 \\
+2.5^{x-2} &= 9
+\end{align*}
+- Hvis I går i stå, kan I finde inspiration i eksemplerne her: [[https://matbhtx.systime.dk/?id=1399]]
+* En hel særlig eksponentiel funktion og logaritme
+
+\begin{align*}
+f(x) &= 2.71828182846 \dots^x \\
+f^{-1}(x) &= \ln(x)
+\end{align*}
+** $e=2.71828182846 \dots$
+#+begin_export html
+<iframe width="600" height="400" src="https://www.youtube.com/embed/AuA2EAgAegE" title="e (Euler's Number) - Numberphile" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+#+end_export
+*** Bonusvideo
+#+begin_export html
+<iframe width="600" height="400" src="https://www.youtube.com/embed/uawO3-tjP1c" title="e (Extra Footage) - Numberphile" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+#+end_export
+** Den naturlige eksponentialfunktion
+#+reveal_html: <div style="font-size: 50%;">
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+*Særlige egenskaber*
+
+- Funktionsværdien til en vilkårlig x-værdi er lig
+- hældningen til tangenten i samme x-værdi, som igen er lig
+- integralet fra minus uendeligt til samme x-værdi
+- Den *eneste* funktion, som har disse egenskaber.
+
+
+Matematisk:
+
+\begin{align*}
+f(x) &= e^x \\
+f'(x) &= \frac{d}{dx} \left( e^x \right) = e^x \\
+F(x) &= \int e^x \,dx = e^x (+k)
+\end{align*}
+
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+#+attr_html: :width 50%
+[[./img/naturlig_eksp_funktion.png]]
+#+attr_html: :width 50%
+[[./img/naturlig_eksp_funktion_2.png]]
+#+attr_html: :width 50%
+[[./img/naturlig_eksp_funktion_3.png]]
+#+reveal_html: </div>
+
+** Den naturlige logaritme
+#+reveal_html: <div style="font-size: 60%;">
+#+begin_quote
+Den /naturlige logaritme/ til et tal, er altså det tal, man skal opløfte $e$ (i stedet for 10 f.eks.) i, for at få det oprindelige tal.
+#+end_quote
+
+#+attr_reveal: :frag (appear)
+- Vi prøver lige igen, bare med den naturlige eksponentialfunktion og logaritme.
+- Hvad skal man opløfte e i, for at få 100?
+- Hvad skal man opløfte e i, for at få 1000 000?
+- Hvad skal man opløfte e i, for at få 10?
+- Hvad skal man opløfte e i, for at få 1?
+- Hvad skal man opløfte e i, for at få 0.1?
+- Hint: På en lommeregner hedder den naturlige logaritme =ln=.
+
+** Regneregler for $ln$
+#+reveal_html: <div style="font-size: 60%;">
+\begin{align*}
+\ln \left( e^x \right) &= x \\
+e^{\ln (x)} &=x \\
+\ln ( a \cdot b) &= \ln(a) + \ln(b) \\
+\ln \left( \frac{a}{b} \right) &= \ln(a) - \ln(b) \\
+\ln \left( a^n \right) &= n \cdot \ln (a) \\
+\ln \left( \sqrt[n]{a^b} \right) &= \ln \left( a^{\frac{b}{n}} \right) = \frac{b}{n} \cdot \ln(a)
+\end{align*}
+
+Altså de *samme* regler, som for $\log$ bare med $e$ som grundtal i stedet for 10.
+
+* Er der en sammenhæng?
+#+reveal_html: <div style="font-size: 60%;">
+#+attr_reveal: :frag (appear)
+- Regnereglerne for $\log$ og $\ln$ er ens.
+- Er der en sammenhæng mellem de to logaritmefunktioner?
+- *Lad os undersøge det!*
+** Sammenhæng
+#+reveal_html: <div style="font-size: 60%;">
+#+attr_reveal: :frag (appear)
+- Vi ved $$e^{\ln(x)} = x = 10^{\log(x)}$$
+- Lad os bare tage den naturlige logaritme på begge sider, og se hvad der sker
+- Det virker altså bedst at gøre sådan noget på tavlen...
+- Det endelige svar bliver $$\ln(x) = \frac{\log(x)}{\log(e)}$$
+- Nu er det jeres tur!
+- Tag 10 tal-logaritmen på begge sider, og se, hvad der sker.
+- I får forhåbentligt $$\log (x) = \frac{\ln(x)}{\ln(10)}$$
+** Alle mulige logaritmer
+#+reveal_html: <div style="font-size: 60%;">
+- Det kan gøres mere generelt
+- Generel eksponentialfunktion og tilhørende logaritme
+  \begin{align*}
+  f(x) &= a^x \\
+  f^{-1}(x) &= \log_a (x) \\
+  f(f^{-1}(x)) &= a^{\log_a (x)} = x \\
+  f^{-1}(f(x)) &= \log_a (a^{x}) = x \\
+  \log_a(x) &= \frac{\log_{10}(x)}{\log_{10}(a)} = \frac{\ln(x)}{\ln(a)}
+  \end{align*}
+
+#+reveal: split
+Læg mærke til spejlingen af funktionerne omkring $y=x$.
+
+[[./img/forskellige_log.png]]
+** Regneregler igen
+#+reveal_html: <div style="font-size: 30%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto auto;">
+#+reveal_html: <div>
+*Naturlig*
+\begin{align*}
+f(x) &= e^x \\
+f^{-1}(x) &= \ln(x)\\
+e^{\ln(x)} &= x \\
+\ln \left( e^x \right) &= x \\
+\ln ( a \cdot b) &= \ln(a) + \ln(b) \\
+\ln \left( \frac{a}{b} \right) &= \ln(a) - \ln(b) \\
+\ln \left( a^n \right) &= n \cdot \ln (a) \\
+\ln \left( \sqrt[m]{a^b} \right) &= \ln \left( a^{\frac{b}{m}} \right) = \frac{b}{m} \cdot \ln(a) \\
+\ln (x) &= \frac{\log(x)}{\log(e)}
+\end{align*}
+Differentiation
+\begin{align*}
+\frac{d}{dx} \left( e^x \right) &= e^{x} \\
+\frac{d}{dx} \left( \ln(x) \right) &= \frac{1}{x}
+\end{align*}
+Integration
+\begin{align*}
+\int e^x \,dx &= e^x \;(+k)\\
+\int \ln(x) \,dx &= x \cdot \ln(x) -x \; (+k)
+\end{align*}
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+*10 tal*
+\begin{align*}
+f(x) &= 10^x \\
+f^{-1}(x) &= \log(x)\\
+10^{\log(x)} &= x \\
+\log \left( 10^x \right) &= x \\
+\log ( a \cdot b) &= \log(a) + \log(b) \\
+\log \left( \frac{a}{b} \right) &= \log(a) - \log(b) \\
+\log \left( a^n \right) &= n \cdot \log (a) \\
+\log \left( \sqrt[m]{a^b} \right) &= \log \left( a^{\frac{b}{m}} \right) = \frac{b}{m} \cdot \log(a) \\
+\log (x) &= \frac{\ln (x)}{\ln (10)}
+\end{align*}
+Differentiation
+\begin{align*}
+\frac{d}{dx} \left( 10^x \right) &= \ln(10) \cdot 10^{x} \\
+\frac{d}{dx} \left( \log(x) \right) &= \frac{1}{\ln(10) \cdot x}
+\end{align*}
+Integration
+\begin{align*}
+\int 10^x \,dx &= \frac{1}{\ln(10)} \cdot 10^x \\
+\int \log(x) \,dx &= \frac{x \cdot \ln(x) -x}{\ln(10)} \;(+k)
+\end{align*}
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+*Generelt*
+\begin{align*}
+f(x) &= n^x \\
+f^{-1}(x) &= \log_n(x)\\
+n^{\log_n(x)} &= x \\
+\log_n \left( n^x \right) &= x \\
+\log_n ( a \cdot b) &= \log_n(a) + \log_n(b) \\
+\log_n \left( \frac{a}{b} \right) &= \log_n(a) - \log_n(b) \\
+\log_n \left( a^n \right) &= n \cdot \log_n (a) \\
+\log_n \left( \sqrt[m]{a^b} \right) &= \log_n \left( a^{\frac{b}{m}} \right) = \frac{b}{m} \cdot \log_n(a) \\
+\log_n (x) &= \frac{\log(x)}{\log(n)} = \frac{\ln (x)}{\ln(n)} = \frac{\log_k(x)}{\log_k(n)}
+\end{align*}
+Differentiation
+\begin{align*}
+\frac{d}{dx} \left( n^x \right) &= \ln(n) \cdot n^{x} \\
+\frac{d}{dx} \left( \log_n(x) \right) &= \frac{1}{\ln(n) \cdot x}
+\end{align*}
+Integration
+\begin{align*}
+\int n^x \,dx &= \ln(n) \cdot n^x \;(+k) \\
+\int \log_n(x) \,dx &= \frac{x \cdot \ln(x) -x}{\ln(n)} \;(+k)
+\end{align*}
+#+reveal_html: </div>
+** Opgaver
+#+reveal_html: <div style="font-size: 60%;">
+Nogle af opgaverne er /simple/, mens andre blandt andet kræver omskrivning til skjulte 2.gradsligninger.
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+*Opgave 8.42*
+
+Beregn følgende værdier: $\log_4(5)$ og $\log_4(20)$.
+
+*Opgave 8.44*
+
+Løs denne ligning:
+
+$$\ln(x-1) + \log(x-1) =1$$
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+*Opgave 8.45 - udsnit*
+
+Løs disse ligninger:
+
+1. $\log \left( x^2 + 5\cdot x - 50 \right) =2$
+
+
+*Opgave 314 - Teknisk matematik, udsnit*
+Du skal bestemme x i følgende ligninger:
+
+1. $2^x = 5$
+2. $2^{x+2} = 5$
+3. $10^{x-1} =12$
+4. $2^{-x} + 2^x =5$
+5. $9^x - 10 \cdot 3^x - 24 =0$
+#+reveal_html: </div>
+* Logaritmiske akser
+#+reveal_html: <div style="font-size: 60%;">
+$$f(x)=3x+0.7 \quad , \quad g(x)=0.7\cdot 3^x \quad , \quad h(x)=0.7\cdot x^3$$
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto auto;">
+#+reveal_html: <div>
+[[./img/plot_alm.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+[[./img/plot_logy.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+[[./img/plot_logxy.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+#+attr_reveal: :frag (appear)
+- Hvad ser I?
+- Beskriv så meget som muligt.
+- *Parsammenligning* (Tal først i makkerpar. Bagefter sammenlignes  makkerskabsgrupper)
+- =Alt+Klik= for at zoom ind. (=Ctrl+Klik= på linux)
+
+#+reveal: split
+- Med logaritmiske akser er det altså nemmere at se forskel på forskellige funktionstyper.
+- Det vil gøre det nemmere at identificere en funktionstype, som passer til et diskret datasæt (datapunkter uden streger imellem).
+** Enkelt og dobbelt-log
+#+reveal_html: <div style="font-size: 55%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: 50% 50%;">
+
+#+reveal_html: <div>
+*Enkeltlog*
+
+#+attr_html: :height 300px 
+[[./img/enkeltlog.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+*Dobbeltlog*
+
+#+attr_html: :height 300px 
+[[./img/dobbeltlog.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+- Inddeling i *dekader*.
+- Hver gang man går et felt op/til højre ganges der med 10.
+- Hver gang man går et felt ned/til venstre divideres der med 10.
+- Den samme relative ændring giver samme afstand, altså
+- er der samme afstand mellem 1 og 2, som mellem 8 og 16 osv.
+** Håndholdt matematik - opgave
+#+reveal_html: <div style="font-size: 60%;">
+I har følgende 3 datasæt
+
+- a: (2, 10), (4, 13), (9, 25), (12.33)
+- b: (1, 4), (5, 3), (8, 2.6), (11, 2)
+- c: (2, 1.22), (4, 4.78), (8, 19.2), (12, 43)
+
+
+1. I skal plotte datasættene på hhv. alm. mm-papir, enkeltlogaritmisk papir og dobbeltlogaritmisk papir. *Dette skal gøres på fysisk på i hånden.*
+   
+2. Afgør for hver af datasættene, om det repræsentere en lineær funktion, en potensfunktion eller en eksponentialfunktion.
+   
+3. Bestem forskrifter, som passer til hver af datasættene.
+   
+   (I geogebra kan man anvende =fitlinje=, =fitpot= og =fitvækst=)
+* Forskrifter for eksp og pot
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+*Eksponentialfunktion*
+
+$$f(x)=b \cdot a^x$$
+
+- Man skal kende 2 punkter. (x_{1}, y_{1}) og (x_{2}, y_{2})
+
+\begin{align*}
+a &= \left( \frac{y_2}{y_1} \right)^{\frac{1}{x_2-x_1}} \\
+b &= \frac{y_1}{a^{x_1}} = \frac{y_2}{a^{x_2}}
+\end{align*}
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+*Potensfunktion*
+
+$$g(x) = b \cdot x^a$$
+- Man skal kende 2 punkter. (x_{1}, y_{1}) og (x_{2}, y_{2})
+- Man kan bruge alle logaritmer i formlerne (log, ln, etc)
+
+\begin{align*}
+a &= \frac{\log(y_2)-\log(y_1)}{\log(x_2) - \log(x_1)} \\
+b &= \frac{y_1}{x_1^a} = \frac{y_2}{x_2^a}
+\end{align*}
+#+reveal_html: </div>
+#+reveal_html: </div>
+** Baggrunden for enkelt og dobbeltlog
+#+reveal_html: <div style="font-size: 60%;">
+#+begin_quote
+1. Hvorfor bliver en eksponentialfunktion til en ret linje i et enkeltlogaritmisk koordinatsystem?
+2. Hvorfor bliver en potensfunktion til en ret linje i et dobbeltlogaritmisk koordinatsystem?
+#+end_quote
+
+
+#+reveal_html: <div style="font-size: 90%;">
+#+attr_reveal: :frag (appear)
+- Intrukser!
+- Når jeg siger buzzwordet ... for *anden*, må I gå igang med opgaven. Ikke før!
+- Opgave i makkerskabsgrupper.
+- Først opdeling i makkerpar.
+- Et spørgsmål til hvert makkerpar.
+- Hvert makkerpar skal finde et et svar til sit spørgsmål.
+- Alle hjælpemidler er tilladte (også jeres matematikbog [[https://matbhtx.systime.dk]])
+- Efterfølgende skal makkerparene *forklare* svarene til spørgsmålene for det andet makkerpar i makkerskabsgruppen.
+- Makkerparret med den *største samlede hårlængde* har spørgsmål 1 om det enkeltlogaritmiske koordinatsystem.
+* Ekspentiel udvikling (WIP)
+** 2 forskellige forskrifter
+** Fordobling
+** Halvering
+** Opstilling af forskrifter
+- med T_{2} og T_{1/2} for hhv b*a^x og b*exp(k*x)
+- og for 2 kendte punkter for hver af forskriftstyperne
