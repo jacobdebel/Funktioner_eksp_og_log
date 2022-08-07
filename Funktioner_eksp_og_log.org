@@ -480,12 +480,173 @@ b &= \frac{y_1}{x_1^a} = \frac{y_2}{x_2^a}
 - Et spørgsmål til hvert makkerpar.
 - Hvert makkerpar skal finde et et svar til sit spørgsmål.
 - Alle hjælpemidler er tilladte (også jeres matematikbog [[https://matbhtx.systime.dk]])
-- Efterfølgende skal makkerparene *forklare* svarene til spørgsmålene for det andet makkerpar i makkerskabsgruppen.
+- Efterfølgende skal makkerparrene *forklare* svarene til spørgsmålene for det andet makkerpar i makkerskabsgruppen.
 - Makkerparret med den *største samlede hårlængde* har spørgsmål 1 om det enkeltlogaritmiske koordinatsystem.
-* Ekspentiel udvikling (WIP)
+* Eksponentiel udvikling 
+** Fitfitternitfitfirumfit
+#+reveal_html: <div style="font-size: 80%;">
+Fit følgende datapunkter vha hhv =fitvækst= og =fitexp= i geogebra
+
+| x |       4 |       7 |      11 |      15 |      18 |      21 |
+| y | 1147.52 | 1272.28 | 1459.97 | 1675.35 | 1857.49 | 2059.43 |
+  
+
+
+#+attr_reveal: :frag (appear)
+Hvad ser I?
+#+attr_reveal: :frag (appear)
+- =fitvækst= -> $1000\cdot 1.035^x$
+- =fitexp= -> $1000\cdot e^{0.0344 \cdot x}$
 ** 2 forskellige forskrifter
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+$$f(x)=b \cdot a^x$$
+
+- b: Skæring med y-aksen
+- a: Fremskrivningsfaktor
+- 0 < a < 1 : Aftagende eksp funktion
+- a > 1: Voksende eksp funktion
+- $a=1+r$, $r$ er den procentvise stigning
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+$$g(x) = b \cdot e^{k \cdot x}$$
+- b: Skæring med y-aksen
+- k: Vækstraten
+- $k<0$: Aftagende eksp funktion
+- $k>0$: Voksende eksp funktion
+#+reveal_html: </div>
+#+reveal_html: </div>
+Sammenhæng
+
+\begin{align*}
+a &= e^k \\
+\ln(a) &= k
+\end{align*}
+
 ** Fordobling
+#+reveal_html: <div style="font-size: 60%;">
+- Hvert makkerpar opskriver en tilfældig *voksende* eksponentialfunktion af typen $f(x)=b \cdot a^x$
+- Indtegn funktionen i et koordinatsystem (enten alm eller enkeltlog)
+- Vælg en tilfældig x-værdi og beregn/aflæs den tilhørende y-værdi.
+- Fordobl nu y-værdien, og beregn/aflæs den tilhørende x-værdi.
+- Gør det en gang til
+- og en gang til.
+- Sammenlign jeres resultater i makkerskabsgrupper
+- *Hvilken sammenhæng mellem tallene kan I finde frem til i fællesskab?*
+*** Fordoblingskonstant
+#+reveal_html: <div style="font-size: 60%;">
+Der skulle gerne være samme afstand på x-aksen mellem hver fordobling, ligegyldigt hvor man starter henne.
+
+Kan beregnes på følgende måder:
+#+reveal_html: <div style="display: grid; grid-template-columns: 50% 50%;">
+#+reveal_html: <div>
+For $f(x)=b\cdot a^x \quad , a>1$
+
+$$T_2 = \frac{\log(2)}{\log(a)} = \frac{\ln(2)}{\ln(a)}$$
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+For $g(x)=b\cdot e^{k\cdot x}\quad , k>0$
+
+$$T_2 = \frac{\ln(2)}{k}$$
+
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+attr_reveal: :frag (appear)
+- Jeg viser den ene udledning. Den anden skal I selv klare i makkerskabsgrupper.
+- *Hvilken skal jeg vise for jer?*
+
 ** Halvering
-** Opstilling af forskrifter
-- med T_{2} og T_{1/2} for hhv b*a^x og b*exp(k*x)
-- og for 2 kendte punkter for hver af forskriftstyperne
+#+reveal_html: <div style="font-size: 60%;">
+For aftagende eksponentialfunktioner er der tale om en halveringskonstant, men ellers er princippet det samme.
+
+#+reveal_html: <div style="display: grid; grid-template-columns: 50% 50%;">
+#+reveal_html: <div>
+For $f(x)=b\cdot a^x \quad , 0< a <1​$
+
+$$T_{1/2} = \frac{\log(1/2)}{\log(a)} = \frac{\ln(1/2)}{\ln(a)}$$
+
+Eller
+$$T_{1/2} = - \frac{\log(2)}{\log(a)} = - \frac{\ln(2)}{\ln(a)}$$
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+For $g(x)=b\cdot e^{k\cdot x}\quad , k<0$
+
+$$T_{1/2} = \frac{\ln(1/2)}{k}$$
+
+Eller
+$$T_{1/2} = - \frac{\ln(2)}{k}$$
+#+reveal_html: </div>
+#+reveal_html: </div>
+Det er dog de førstnævnte formler, som er nemmest at huske.
+** Bestemmelse af forskrifter
+#+reveal_html: <div style="font-size: 50%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+
+#+reveal_html: <div>
+$f(x)=b \cdot a^x$
+
+- 2 kendte punkter
+
+
+\begin{align*}
+a &= \left(\frac{y_2}{y_1}\right)^{\frac{1}{x_2-x_1}}\\
+b &= \frac{y_1}{a^{x_1}} = \frac{y_2}{a^{x_2}}
+\end{align*}
+
+- 1 kendt punkt + Fordoblings/halverings-konstant
+\begin{align*}
+a &= 2^{\frac{1}{T_2}} \text{ eller } a=\left( 1/2 \right)^{\frac{1}{T_{1/2}}}\\
+b &= \frac{y_1}{a^{x_1}} 
+\end{align*}
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+$g(x)=b \cdot e^{k\cdot x}$
+
+- 2 kendte punkter
+
+
+\begin{align*}
+k &= \frac{\ln(y_2) - \ln(y_1)}{x_2-x_1}\\
+b &= \frac{y_1}{e^{k\cdot x_1}} = \frac{y_2}{e^{k\cdot x_2}}
+\end{align*}
+
+- 1 kendt punkt + Fordoblings/halverings-konstant
+\begin{align*}
+k &= \frac{\ln(2)}{T_2} \text{ eller } k=\frac{\ln(1/2)}{T_{1/2}}\\
+b &= \frac{y_1}{e^{k\cdot x_1}} 
+\end{align*}
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** Arbejd, arbejd
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+[[./img/algevaekst_opgave.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+[[./img/tollundmanden_opgave.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** Styr på finanserne
+#+reveal_html: <div style="font-size: 40%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: 50% 50%;">
+#+reveal_html: <div>
+[[./img/finansopgave_1.png]]
+[[./img/finansopgave_3.png]]
+- Det er ikke bare at dele med 12! Det er lidt mere omstændigt.
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+[[./img/finansopgave_2.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+* Projekt Kaffe og te
+TBA
