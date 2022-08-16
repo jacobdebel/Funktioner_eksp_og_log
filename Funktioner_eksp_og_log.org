@@ -478,7 +478,7 @@ b &= \frac{y_1}{x_1^a} = \frac{y_2}{x_2^a}
 - Opgave i makkerskabsgrupper.
 - Først opdeling i makkerpar.
 - Et spørgsmål til hvert makkerpar.
-- Hvert makkerpar skal finde et et svar til sit spørgsmål.
+- Hvert makkerpar skal finde et svar til sit spørgsmål.
 - Alle hjælpemidler er tilladte (også jeres matematikbog [[https://matbhtx.systime.dk]])
 - Efterfølgende skal makkerparrene *forklare* svarene til spørgsmålene for det andet makkerpar i makkerskabsgruppen.
 - Makkerparret med den *største samlede hårlængde* har spørgsmål 1 om det enkeltlogaritmiske koordinatsystem.
