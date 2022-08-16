@@ -427,7 +427,7 @@ I har følgende 3 datasæt
 - c: (2, 1.22), (4, 4.78), (8, 19.2), (12, 43)
 
 
-1. I skal plotte datasættene på hhv. alm. mm-papir, enkeltlogaritmisk papir og dobbeltlogaritmisk papir. *Dette skal gøres på fysisk på i hånden.*
+1. I skal plotte datasættene på hhv. alm. mm-papir, enkeltlogaritmisk papir og dobbeltlogaritmisk papir. *Dette skal gøres på fysisk papir i hånden.*
    
 2. Afgør for hver af datasættene, om det repræsentere en lineær funktion, en potensfunktion eller en eksponentialfunktion.
    
