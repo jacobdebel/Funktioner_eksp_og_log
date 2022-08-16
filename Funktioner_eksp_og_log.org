@@ -473,8 +473,8 @@ b &= \frac{y_1}{x_1^a} = \frac{y_2}{x_2^a}
 
 #+reveal_html: <div style="font-size: 90%;">
 #+attr_reveal: :frag (appear)
-- Intrukser!
-- Når jeg siger buzzwordet ... for *anden*, må I gå igang med opgaven. Ikke før!
+- Instrukser!
+- Når jeg siger buzzwordet ... for *anden* gang, må I gå igang med opgaven. Ikke før!
 - Opgave i makkerskabsgrupper.
 - Først opdeling i makkerpar.
 - Et spørgsmål til hvert makkerpar.
