@@ -434,6 +434,7 @@ I har følgende 3 datasæt
 3. Bestem forskrifter, som passer til hver af datasættene.
    
    (I geogebra kan man anvende =fitlinje=, =fitpot= og =fitvækst=)
+
 * Forskrifter for eksp og pot
 #+reveal_html: <div style="font-size: 60%;">
 #+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
@@ -482,6 +483,16 @@ b &= \frac{y_1}{x_1^a} = \frac{y_2}{x_2^a}
 - Alle hjælpemidler er tilladte (også jeres matematikbog [[https://matbhtx.systime.dk]])
 - Efterfølgende skal makkerparrene *forklare* svarene til spørgsmålene for det andet makkerpar i makkerskabsgruppen.
 - Makkerparret med den *største samlede hårlængde* har spørgsmål 1 om det enkeltlogaritmiske koordinatsystem.
+
+** Aflæsning i enkeltlog
+#+reveal_html: <div style="font-size: 50%;">
+- I skal bestemme forskrifterne for de 4 viste eksponentielle funktioner. I har kun graferne i det enkeltlogaritmiske koordinatsystem.
+- Aflæs passende punkter. Beregn a og b vha formlerne for bestemmelse af forskrift.
+
+#+attr_html: :width 80%
+[[./img/Ukendte_forskrifter.png][file:./img/Ukendte_forskrifter.png]]
+
+
 * Eksponentiel udvikling 
 ** Fitfitternitfitfirumfit
 #+reveal_html: <div style="font-size: 80%;">
@@ -647,6 +658,59 @@ b &= \frac{y_1}{e^{k\cdot x_1}}
 [[./img/finansopgave_2.png]]
 #+reveal_html: </div>
 #+reveal_html: </div>
+
+* Forskudt eksponentiel vækst
+#+reveal_html: <div style="font-size: 50%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: 30% auto;">
+#+reveal_html: <div>
+- I har set alle eksponentialfunktioner nærme sig x-aksen.
+- Men det er muligt at forskyde en eksponentialfunktion både i x- og i y-retningen.
+
+\begin{align*}
+f(x) &= c + b \cdot a^{x-d} \\
+g(x) &= c + b \cdot e^{k \cdot \left( x-d \right)}
+\end{align*}
+- *Hvilken betydning har a, b, c, d og k?*
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+#+begin_export html
+<iframe
+width="580"
+height="400"
+src="./ggb/forskudt_eksp.html"
+title=""
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+#+end_export
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** Plotteopgave
+#+begin_comment
+Forskriften er f(x)=(80-20)*0.8^x + 20
+#+end_comment
+#+reveal_html: <div style="font-size: 60%;">
+Plot følgende koordinater i hhv et almindeligt og et enkeltlogaritmisk koordinatsystem. *Det er en god idé at bruge et regneark til det.*
+|---+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------|
+| x |     0 |     1 |     2 |     3 |     4 |     5 |     6 |     7 |     8 |     9 |    10 |
+|---+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------|
+| y |    80 |    68 |  58.4 | 50.72 | 44.58 | 39.66 | 35.73 | 32.58 | 30.07 | 28.05 | 26.44 |
+|---+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------|
+| x |    11 |    12 |    13 |    14 |    15 |    16 |    17 |    18 |    19 |    20 |       |
+|---+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------|
+| y | 25.15 | 24.12 | 23.30 | 22.64 | 22.11 | 21.69 | 21.35 | 21.08 | 20.86 | 20.69 |       |
+|---+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------|
+
+#+attr_reveal: :frag (appear)
+- Hvad ser I?
+- Prøv lige at trække den vandrette asymptote fra y-værdierne og plot igen.
+- Hvad ser I nu?
+- Lad os se, hvad jeg ser. (Bonus: se hvordan gnuplot virker)
+- Brug jeres regneark til at bestemme en *tendenslinje* til jeres andet plot.
+- Opstil nu en forskrift, som kan beskrive jeres *oprindelige* data.
 
 * Projekt Kaffe og te
 TBA

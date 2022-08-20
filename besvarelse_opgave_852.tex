@@ -1,0 +1,83 @@
+% Intended LaTeX compiler: xelatex
+\documentclass[a4paper, 12pt]{article}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[danish]{babel}
+\usepackage{mathtools}
+\usepackage{slashed}
+\usepackage[margin=3.0cm]{geometry}
+\hypersetup{colorlinks, linkcolor=black, urlcolor=blue}
+\setlength{\parindent}{0em}
+\parskip 1.5ex
+\date{}
+\title{Besvarelse af opgave 8.52}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={Besvarelse af opgave 8.52},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.1 (Org mode 9.5.4)}, 
+ pdflang={Danish}}
+\begin{document}
+
+\maketitle
+
+\section*{Selve opgaven}
+\label{sec:orge9c96a3}
+En reklame fortæller om et forbrugslån med en årlig rente på 19\%.
+
+\begin{itemize}
+\item Beregn den månedlige rente.
+\end{itemize}
+
+
+\section*{Besvarelse}
+\label{sec:org3fcb4f5}
+Man skal forestille sig to forskrifter, som skal give det samme resultat efter f.eks. ét år. Den ene forskrift tilskriver rente en gang per måned, mens den anden tilskriver rente en gang om året.
+
+x beregner antal år. Der kan altså opskrives følgende to forskrifter:
+\begin{align*}
+f_{pr.md}(x) &= b \cdot \left(1+r_m\right)^{12x} \\
+g_{pr.aar}(x) &= b \cdot \left( 1+r_{aar} \right)^{x}
+\end{align*}
+
+Grunden til, at der står 12x for \(f_{pr.md}(x)\), er at der er 12 terminer på ét år.
+
+Efter f.eks. ét år skal de to funktioner give det samme resultat ud. Altså kan man sætte de to forskrifter lig hinanden.
+
+\begin{align*}
+f_{pr.md}(x) &= g_{pr.aar}(x) \\
+b \cdot \left( 1+r_m \right)^{12x} &= b\cdot \left( 1+r_{aar} \right)^x
+\end{align*}
+Her fra skal der bare reduceres, og \(r_m\) skal isolers:
+
+\begin{align*}
+\slashed{b} \cdot \left( 1+r_m \right)^{12x} &= \slashed{b}\cdot \left( 1+r_{aar} \right)^x \\
+\left( 1+r_m \right)^{12x} &= \left( 1+r_{aar} \right)^x \\
+\sqrt[\slashed{x}]{\left( 1+r_m \right)^{12 \slashed{x}}} &= \sqrt[\slashed{x}]{\left( 1+r_{aar} \right)^\slashed{x}} \\
+\left( 1+r_m \right)^{12} &= \left( 1+r_{aar} \right) \\
+\sqrt[12]{\left( 1+r_m \right)^{12}} &= \sqrt[12]{\left( 1+r_{aar} \right)} \\
+\sqrt[\slashed{12}]{\left( 1+r_m \right)^{\slashed{12}}} &= \sqrt[12]{\left( 1+r_{aar} \right)} = \left(1+r_{aar} \right)^{\frac{1}{12}}\\
+1+r_m  &=\left(1+r_{aar} \right)^{\frac{1}{12}}\\
+r_m  &=\left(1+r_{aar} \right)^{\frac{1}{12}} - 1
+\end{align*}
+
+Med opgavens tal bliver det altså til følgende:
+
+\begin{align*}
+r_m  &=\left(1+r_{aar} \right)^{\frac{1}{12}} - 1 \\
+r_m  &=\left(1+0.19 \right)^{\frac{1}{12}} - 1 \\
+r_m  &=0.0146
+\end{align*}
+
+Den månedlige rente er altså på 1.46\%.
+
+Hvis man blot havde delt den oprindelige årlige rentesats på 19\% med 12, havde man fået 19/12 = 1.58 \%. Hvis man så havde anvendt denne rentesats hver måned, havde man fået for stor en gæld efter 12 måneder.
+\end{document}
