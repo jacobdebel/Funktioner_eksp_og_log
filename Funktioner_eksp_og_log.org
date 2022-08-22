@@ -464,6 +464,39 @@ b &= \frac{y_1}{x_1^a} = \frac{y_2}{x_2^a}
 \end{align*}
 #+reveal_html: </div>
 #+reveal_html: </div>
+
+** Hvor kommer formlerne fra?
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div>
+*Eksponentialfunktion*
+
+- Begynd med to ligninger med to ubekendte:
+
+\begin{align*}
+I:\quad y_1 &= b \cdot a^{x_1} \\
+II:\quad y_2 &= b \cdot a^{x_2} 
+\end{align*}
+
+- Løs ligningssystemet ved at isolere b i begge ligninger, sætte de to ligninger lig hinanden og endelig isoler a.
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+*Potensfunktion*
+
+- Begynd med to ligninger med to ubekendte:
+
+\begin{align*}
+I:\quad y_1 &= b \cdot a^{x_1} \\
+II:\quad y_2 &= b \cdot a^{x_2} 
+\end{align*}
+ 
+- Løs ligningssystemet ved at isolere b i begge ligninger, sætte de to ligninger lig hinanden og endelig isoler a.
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+- Hvilken af dem skal jeg tage mig af, og hvilken skal I selv arbejde med?
+ 
 ** Baggrunden for enkelt og dobbeltlog
 #+reveal_html: <div style="font-size: 60%;">
 #+begin_quote
