@@ -487,8 +487,8 @@ II:\quad y_2 &= b \cdot a^{x_2}
 - Begynd med to ligninger med to ubekendte:
 
 \begin{align*}
-I:\quad y_1 &= b \cdot a^{x_1} \\
-II:\quad y_2 &= b \cdot a^{x_2} 
+I:\quad y_1 &= b \cdot x_1^a \\
+II:\quad y_2 &= b \cdot x_2^a 
 \end{align*}
  
 - Løs ligningssystemet ved at isolere b i begge ligninger, sætte de to ligninger lig hinanden og endelig isoler a.
