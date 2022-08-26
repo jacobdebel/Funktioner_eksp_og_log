@@ -745,5 +745,18 @@ Plot følgende koordinater i hhv et almindeligt og et enkeltlogaritmisk koordina
 - Brug jeres regneark til at bestemme en *tendenslinje* til jeres andet plot.
 - Opstil nu en forskrift, som kan beskrive jeres *oprindelige* data.
 
-* Projekt Kaffe og te
-TBA
+* Vibens-KAFFE-hus
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: 60% 40%;">
+#+reveal_html: <div>
+#+attr_html: :width 380px
+[[./Projekt_Vibens-KAFFE-hus.pdf][file:img/vibenskaffehus.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div>
+- Find projektoplægget på skolens IT-platform sammen med afleveringstidspunkt (eller klik på billedet af projektet.)
+- Husk også at downloade den tilhørende datafil, [[./Afkoeling_af_kaffe_nul_grader_udenfor.csv][Afkoeling_af_kaffe_nul_grader_udenfor.csv]].
+
+#+reveal_html: </div>
+#+reveal_html: </div>
+
